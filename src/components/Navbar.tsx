@@ -12,7 +12,6 @@ export default function Navbar() {
             <li><a href="/contact" className="hover:underline">Contact</a></li>
           </ul>
           <div className="flex space-x-4">
-            <Link href="/register" className="bg-white hover:opacity-85 transition-all text-black  py-2 px-4 rounded-md">Sign Up</Link>
             <Link href="/login" className="bg-white hover:opacity-85 transition-all text-black  py-2 px-4 rounded-md">Log In</Link>
           </div>
         </div>

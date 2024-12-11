@@ -1,9 +1,1 @@
-{
-  "/page": "app/page.js",
-  "/containerBooking/page": "app/containerBooking/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/login/page": "app/login/page.js",
-  "/register/page": "app/register/page.js",
-  "/containers_details/page": "app/containers_details/page.js"
-}
+{}

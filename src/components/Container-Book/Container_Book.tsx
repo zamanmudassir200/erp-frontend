@@ -45,9 +45,7 @@
 //   };
 // };
 
-
 // const Container_Book = () => {
-   
 
 //   const [codes, setCodes] = useState([]);
 
@@ -164,7 +162,7 @@
 //       }
 //     } catch (error) {
 //       console.log(error);
-   
+
 //       toast.info(
 //         ` Client ID : Generated \n ${new Date().toLocaleDateString()}`
 //       );
@@ -187,198 +185,197 @@
 //           </CardHeader>
 //           <CardContent>
 //             <form className="space-y-4" onSubmit={handleSubmit(onsubmit)}>
-              // {/* Container Type */}
-              // <div>
-              //   <Label htmlFor="container_type">Container Type</Label>
-              //   <Select
-              //     onValueChange={(value) => setValue("container_type", value)}
-              //   >
-              //     <SelectTrigger>
-              //       <SelectValue placeholder="Select Container Type" />
-              //     </SelectTrigger>
-              //     <SelectContent>
-              //       <SelectItem value="Refrigerated">Refrigerated</SelectItem>
-              //       <SelectItem value="Dry">Dry</SelectItem>
-              //     </SelectContent>
-              //   </Select>
-              // </div>
+// {/* Container Type */}
+// <div>
+//   <Label htmlFor="container_type">Container Type</Label>
+//   <Select
+//     onValueChange={(value) => setValue("container_type", value)}
+//   >
+//     <SelectTrigger>
+//       <SelectValue placeholder="Select Container Type" />
+//     </SelectTrigger>
+//     <SelectContent>
+//       <SelectItem value="Refrigerated">Refrigerated</SelectItem>
+//       <SelectItem value="Dry">Dry</SelectItem>
+//     </SelectContent>
+//   </Select>
+// </div>
 
-              // {/* Weight */}
-              // <div>
-              //   <Label htmlFor="weight">Weight (tons)</Label>
-              //   <Input
-              //     id="weight"
-              //     type="number"
-              //     step="0.1"
-              //     placeholder="Enter weight"
-              //     {...register("weight", {
-              //       required: "Weight is required",
-              //       min: {
-              //         value: 0.1,
-              //         message: "Weight must be at least 0.1 tons",
-              //       },
-              //     })}
-              //   />
-              //   {errors.weight && (
-              //     <p className="text-red-500 text-sm">
-              //       {errors.weight.message}
-              //     </p>
-              //   )}
-              // </div>
+// {/* Weight */}
+// <div>
+//   <Label htmlFor="weight">Weight (tons)</Label>
+//   <Input
+//     id="weight"
+//     type="number"
+//     step="0.1"
+//     placeholder="Enter weight"
+//     {...register("weight", {
+//       required: "Weight is required",
+//       min: {
+//         value: 0.1,
+//         message: "Weight must be at least 0.1 tons",
+//       },
+//     })}
+//   />
+//   {errors.weight && (
+//     <p className="text-red-500 text-sm">
+//       {errors.weight.message}
+//     </p>
+//   )}
+// </div>
 
-              // {/* Containers */}
-              // <div>
-              //   <div className="space-y-2">
-              //     <Table>
-              //       <TableHeader>
-              //         <TableRow>
-              //           <TableHead className="">Size</TableHead>
-              //           <TableHead>Quantity</TableHead>
-              //           <TableHead className="text-left">Price</TableHead>
-              //         </TableRow>
-              //       </TableHeader>
-              //       <TableBody>
-              //         {watch("containers")?.map((container, index) => (
-              //           <TableRow key={index}>
-              //             <TableCell className="font-medium">
-              //               {container.size}
-              //             </TableCell>
-              //             <TableCell>{container.quantity}</TableCell>
-              //             <TableCell>
-              //               {container.size === "20 feet"
-              //                 ? container.quantity * 1000
-              //                 : container.quantity * 2000}
-              //               $
-              //             </TableCell>
-              //           </TableRow>
-              //         ))}
-              //       </TableBody>
-              //       <TableFooter>
-              //         <TableRow>
-              //           <TableCell colSpan={3}>Total</TableCell>
-              //           <TableCell className="text-right">
-              //             {" "}
-              //             {watch("containers")?.reduce(
-              //               (total, container) =>
-              //                 total +
-              //                 (container.size === "20 feet"
-              //                   ? container.quantity * 1000
-              //                   : container.quantity * 2000),
-              //               0
-              //             )}
-              //             $
-              //           </TableCell>
-              //         </TableRow>
-              //       </TableFooter>
-              //     </Table>
-              //   </div>
-              // </div>
+// {/* Containers */}
+// <div>
+//   <div className="space-y-2">
+//     <Table>
+//       <TableHeader>
+//         <TableRow>
+//           <TableHead className="">Size</TableHead>
+//           <TableHead>Quantity</TableHead>
+//           <TableHead className="text-left">Price</TableHead>
+//         </TableRow>
+//       </TableHeader>
+//       <TableBody>
+//         {watch("containers")?.map((container, index) => (
+//           <TableRow key={index}>
+//             <TableCell className="font-medium">
+//               {container.size}
+//             </TableCell>
+//             <TableCell>{container.quantity}</TableCell>
+//             <TableCell>
+//               {container.size === "20 feet"
+//                 ? container.quantity * 1000
+//                 : container.quantity * 2000}
+//               $
+//             </TableCell>
+//           </TableRow>
+//         ))}
+//       </TableBody>
+//       <TableFooter>
+//         <TableRow>
+//           <TableCell colSpan={3}>Total</TableCell>
+//           <TableCell className="text-right">
+//             {" "}
+//             {watch("containers")?.reduce(
+//               (total, container) =>
+//                 total +
+//                 (container.size === "20 feet"
+//                   ? container.quantity * 1000
+//                   : container.quantity * 2000),
+//               0
+//             )}
+//             $
+//           </TableCell>
+//         </TableRow>
+//       </TableFooter>
+//     </Table>
+//   </div>
+// </div>
 
-              // {/* Price*/}
-              // <div>
-              //   <Label htmlFor="price">Price (USD)</Label>
-              //   <Input
-              //     readOnly
-              //     id="price"
-              //     type="number"
-              //     placeholder="Enter weight"
-              //     {...register("price")}
-              //   />
-              // </div>
+// {/* Price*/}
+// <div>
+//   <Label htmlFor="price">Price (USD)</Label>
+//   <Input
+//     readOnly
+//     id="price"
+//     type="number"
+//     placeholder="Enter weight"
+//     {...register("price")}
+//   />
+// </div>
 
-              // <div>
-              //   <Label htmlFor="handling_type">Handling Type</Label>
-              //   <Select
-              //     onValueChange={(value) => setValue("handling_type", value)}
-              //   >
-              //     <SelectTrigger>
-              //       <SelectValue placeholder="Select Handling Type" />
-              //     </SelectTrigger>
-              //     <SelectContent>
-              //       <SelectItem value="Employee">
-              //         Employee (Material Checked)
-              //       </SelectItem>
-              //       <SelectItem value="Anonymous">
-              //         Anonymous (No Guarantee)
-              //       </SelectItem>
-              //     </SelectContent>
-              //   </Select>
-              //   {errors.handling_type && (
-              //     <p className="text-red-500 text-sm">
-              //       {errors.handling_type.message}
-              //     </p>
-              //   )}
-              // </div>
+// <div>
+//   <Label htmlFor="handling_type">Handling Type</Label>
+//   <Select
+//     onValueChange={(value) => setValue("handling_type", value)}
+//   >
+//     <SelectTrigger>
+//       <SelectValue placeholder="Select Handling Type" />
+//     </SelectTrigger>
+//     <SelectContent>
+//       <SelectItem value="Employee">
+//         Employee (Material Checked)
+//       </SelectItem>
+//       <SelectItem value="Anonymous">
+//         Anonymous (No Guarantee)
+//       </SelectItem>
+//     </SelectContent>
+//   </Select>
+//   {errors.handling_type && (
+//     <p className="text-red-500 text-sm">
+//       {errors.handling_type.message}
+//     </p>
+//   )}
+// </div>
 
-              // <div>
-              //   <Label htmlFor="installments">Installments</Label>
-              //   <Select
-              //     onValueChange={(value) =>
-              //       setValue("installments", value)
-              //     }
-              //   >
-              //     <SelectTrigger>
-              //       <SelectValue placeholder="Select Installments" />
-              //     </SelectTrigger>
-              //     <SelectContent>
-              //       <SelectItem value="full_payment">Full Payment</SelectItem>
-              //       <SelectItem value="installment">Installments</SelectItem>
-              //     </SelectContent>
-              //   </Select>
-              // </div>
+// <div>
+//   <Label htmlFor="installments">Installments</Label>
+//   <Select
+//     onValueChange={(value) =>
+//       setValue("installments", value)
+//     }
+//   >
+//     <SelectTrigger>
+//       <SelectValue placeholder="Select Installments" />
+//     </SelectTrigger>
+//     <SelectContent>
+//       <SelectItem value="full_payment">Full Payment</SelectItem>
+//       <SelectItem value="installment">Installments</SelectItem>
+//     </SelectContent>
+//   </Select>
+// </div>
 
-          
-              // {installments == 'installment' && (
-                
-              //    <>
-                 
-              //          <div>
-              //   <Label htmlFor="installments_period">Installments Period</Label>
-              //   <Select
-              //     onValueChange={(value) =>
-              //       setValue("installment_period", parseInt(value))
-              //     }
-              //   >
-              //     <SelectTrigger>
-              //       <SelectValue placeholder="Select Installments Period" />
-              //     </SelectTrigger>
-              //     <SelectContent>
-              //       <SelectItem value="3">3 months</SelectItem>
-              //       <SelectItem value="6">6 months</SelectItem>
-              //     </SelectContent>
-              //   </Select>
-              // </div> 
-              //    </>
-              // )}
+// {installments == 'installment' && (
 
-              // <div>
-              //   <div>
-              //     <div className="space-y-2">
-              //       <Table>
-              //         <TableHeader>
-              //           <TableRow>
-              //             <TableHead>Installement</TableHead>
-              //             <TableHead>Amount</TableHead>
-              //           </TableRow>
-              //         </TableHeader>
-              //         <TableBody>
-              //           {watch("installmentDetails")?.map((e: any) => {
-              //             return (
-              //               <>
-              //                 <TableRow key={e.installment_number}>
-              //                   <TableCell className="font-medium">
-              //                     {e.installment_number}
-              //                   </TableCell>
-              //                   <TableCell>{e.amount}$</TableCell>
-              //                 </TableRow>
-              //               </>
-              //             );
-              //           })}
-              //         </TableBody>
-              //       </Table>
-              //     </div>
-              //   </div>
-              // </div>
+//    <>
+
+//          <div>
+//   <Label htmlFor="installments_period">Installments Period</Label>
+//   <Select
+//     onValueChange={(value) =>
+//       setValue("installment_period", parseInt(value))
+//     }
+//   >
+//     <SelectTrigger>
+//       <SelectValue placeholder="Select Installments Period" />
+//     </SelectTrigger>
+//     <SelectContent>
+//       <SelectItem value="3">3 months</SelectItem>
+//       <SelectItem value="6">6 months</SelectItem>
+//     </SelectContent>
+//   </Select>
+// </div>
+//    </>
+// )}
+
+// <div>
+//   <div>
+//     <div className="space-y-2">
+//       <Table>
+//         <TableHeader>
+//           <TableRow>
+//             <TableHead>Installement</TableHead>
+//             <TableHead>Amount</TableHead>
+//           </TableRow>
+//         </TableHeader>
+//         <TableBody>
+//           {watch("installmentDetails")?.map((e: any) => {
+//             return (
+//               <>
+//                 <TableRow key={e.installment_number}>
+//                   <TableCell className="font-medium">
+//                     {e.installment_number}
+//                   </TableCell>
+//                   <TableCell>{e.amount}$</TableCell>
+//                 </TableRow>
+//               </>
+//             );
+//           })}
+//         </TableBody>
+//       </Table>
+//     </div>
+//   </div>
+// </div>
 
 //               {/* Receiver Details */}
 //               <h3 className="text-lg font-medium">Receiver Details</h3>
@@ -488,7 +485,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectItem, SelectTrigger, SelectContent, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectItem,
+  SelectTrigger,
+  SelectContent,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Table,
   TableBody,
@@ -500,7 +503,6 @@ import {
 } from "@/components/ui/table";
 import { toast } from "react-toastify";
 import axios from "axios";
-
 
 // Define the form data type
 type FormValues = {
@@ -514,7 +516,11 @@ type FormValues = {
   handling_type: string;
   installments: string;
   installment_period: number;
-  installmentDetails: { installment_number: number; amount: number; status: string }[];
+  installmentDetails: {
+    installment_number: number;
+    amount: number;
+    status: string;
+  }[];
   receiver_details: {
     name: string;
     address: string;
@@ -527,7 +533,13 @@ const ContainerBookingForm = () => {
   const [step, setStep] = useState(1); // Initialize step state
   const [codes, setCodes] = useState([]); // Store country codes
 
-  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+    watch,
+  } = useForm<FormValues>();
 
   // Fetch country codes
   useEffect(() => {
@@ -537,7 +549,9 @@ const ContainerBookingForm = () => {
       const countryData = countries.map((country: any) => ({
         name: country.name.common,
         code: country.cca2,
-        callingCode: country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : ""),
+        callingCode:
+          country.idd.root +
+          (country.idd.suffixes ? country.idd.suffixes[0] : ""),
       }));
       setCodes(countryData);
     }
@@ -619,10 +633,14 @@ const ContainerBookingForm = () => {
                   <Input
                     id="sender_name"
                     placeholder="Enter your name"
-                    {...register("sender_name", { required: "Name is required" })}
+                    {...register("sender_name", {
+                      required: "Name is required",
+                    })}
                   />
                   {errors.sender_name && (
-                    <p className="text-red-500 text-sm">{errors.sender_name.message}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.sender_name.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -631,10 +649,14 @@ const ContainerBookingForm = () => {
                     id="sender_email"
                     type="email"
                     placeholder="Enter your email"
-                    {...register("sender_email", { required: "Email is required" })}
+                    {...register("sender_email", {
+                      required: "Email is required",
+                    })}
                   />
                   {errors.sender_email && (
-                    <p className="text-red-500 text-sm">{errors.sender_email.message}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.sender_email.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -642,38 +664,46 @@ const ContainerBookingForm = () => {
                   <Input
                     id="sender_phone"
                     placeholder="Enter your phone number"
-                    {...register("sender_phone", { required: "Phone number is required" })}
+                    {...register("sender_phone", {
+                      required: "Phone number is required",
+                    })}
                   />
                   {errors.sender_phone && (
-                    <p className="text-red-500 text-sm">{errors.sender_phone.message}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.sender_phone.message}
+                    </p>
                   )}
                 </div>
-                <Button className="my-2" onClick={() => setStep(2)}>Next</Button>
+                <Button className="my-2" onClick={() => setStep(2)}>
+                  Next
+                </Button>
               </div>
             )}
 
             {step === 2 && (
               <div>
-                <h3 className="text-lg font-medium">Container Booking Details</h3>
+                <h3 className="text-lg font-medium">
+                  Container Booking Details
+                </h3>
                 {/* Add container form fields */}
                 {/* Container type, weight, handling, installment period */}
                 {/* Container Type */}
-              <div>
-                <Label htmlFor="container_type">Container Type</Label>
-                <Select
-                  onValueChange={(value) => setValue("container_type", value)}
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Container Type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="Refrigerated">Refrigerated</SelectItem>
-                    <SelectItem value="Dry">Dry</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+                <div>
+                  <Label htmlFor="container_type">Container Type</Label>
+                  <Select
+                    onValueChange={(value) => setValue("container_type", value)}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select Container Type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Refrigerated">Refrigerated</SelectItem>
+                      <SelectItem value="Dry">Dry</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-              {/* Weight */}
+                {/* Weight
               <div>
                 <Label htmlFor="weight">Weight (tons)</Label>
                 <Input
@@ -694,166 +724,184 @@ const ContainerBookingForm = () => {
                     {errors.weight.message}
                   </p>
                 )}
-              </div>
-
-              {/* Containers */}
-              <div>
-                <div className="space-y-2">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead className="">Size</TableHead>
-                        <TableHead>Quantity</TableHead>
-                        <TableHead className="text-left">Price</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {watch("containers")?.map((container, index) => (
-                        <TableRow key={index}>
-                          <TableCell className="font-medium">
-                            {container.size}
-                          </TableCell>
-                          <TableCell>{container.quantity}</TableCell>
-                          <TableCell>
-                            {container.size === "20 feet"
-                              ? container.quantity * 1000
-                              : container.quantity * 2000}
-                            $
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                    <TableFooter>
-                      <TableRow>
-                        <TableCell colSpan={3}>Total</TableCell>
-                        <TableCell className="text-right">
-                          {" "}
-                          {watch("containers")?.reduce(
-                            (total, container) =>
-                              total +
-                              (container.size === "20 feet"
-                                ? container.quantity * 1000
-                                : container.quantity * 2000),
-                            0
-                          )}
-                          $
-                        </TableCell>
-                      </TableRow>
-                    </TableFooter>
-                  </Table>
+              </div> */}
+                {/* Weight */}
+                <div>
+                  <Label htmlFor="weight">Weight (tons)</Label>
+                  <Input
+                    id="weight"
+                    type="number"
+                    step="0.1"
+                    placeholder="Enter weight"
+                    {...register("weight", {
+                      required: "Weight is required",
+                      min: {
+                        value: 0.1, // Ensuring the minimum value is 0.1 tons, so negative weight is disallowed
+                        message: "Weight must be at least 0.1 tons",
+                      },
+                    })}
+                  />
+                  {errors.weight && (
+                    <p className="text-red-500 text-sm">
+                      {errors.weight.message}
+                    </p>
+                  )}
                 </div>
-              </div>
 
-              {/* Price*/}
-              <div>
-                <Label htmlFor="price">Price (USD)</Label>
-                <Input
-                  readOnly
-                  id="price"
-                  type="number"
-                  placeholder="Enter weight"
-                  {...register("price")}
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="handling_type">Handling Type</Label>
-                <Select
-                  onValueChange={(value) => setValue("handling_type", value)}
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Handling Type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="Employee">
-                      Employee (Material Checked)
-                    </SelectItem>
-                    <SelectItem value="Anonymous">
-                      Anonymous (No Guarantee)
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-                {errors.handling_type && (
-                  <p className="text-red-500 text-sm">
-                    {errors.handling_type.message}
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <Label htmlFor="installments">Installments</Label>
-                <Select
-                  onValueChange={(value) =>
-                    setValue("installments", value)
-                  }
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Installments" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="full_payment">Full Payment</SelectItem>
-                    <SelectItem value="installment">Installments</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-          
-              {installments == 'installment' && (
-                
-                 <>
-                 
-                       <div>
-                <Label htmlFor="installments_period">Installments Period</Label>
-                <Select
-                  onValueChange={(value) =>
-                    setValue("installment_period", parseInt(value))
-                  }
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Installments Period" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="3">3 months</SelectItem>
-                    <SelectItem value="6">6 months</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div> 
-                 </>
-              )}
-
-              <div>
+                {/* Containers */}
                 <div>
                   <div className="space-y-2">
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Installement</TableHead>
-                          <TableHead>Amount</TableHead>
+                          <TableHead className="">Size</TableHead>
+                          <TableHead>Quantity</TableHead>
+                          <TableHead className="text-left">Price</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {watch("installmentDetails")?.map((e: any) => {
-                          return (
-                            <>
-                              <TableRow key={e.installment_number}>
-                                <TableCell className="font-medium">
-                                  {e.installment_number}
-                                </TableCell>
-                                <TableCell>{e.amount}$</TableCell>
-                              </TableRow>
-                            </>
-                          );
-                        })}
+                        {watch("containers")?.map((container, index) => (
+                          <TableRow key={index}>
+                            <TableCell className="font-medium">
+                              {container.size}
+                            </TableCell>
+                            <TableCell>{container.quantity}</TableCell>
+                            <TableCell>
+                              {container.size === "20 feet"
+                                ? container.quantity * 1000
+                                : container.quantity * 2000}
+                              $
+                            </TableCell>
+                          </TableRow>
+                        ))}
                       </TableBody>
+                      <TableFooter>
+                        <TableRow>
+                          <TableCell colSpan={3}>Total</TableCell>
+                          <TableCell className="text-right">
+                            {" "}
+                            {watch("containers")?.reduce(
+                              (total, container) =>
+                                total +
+                                (container.size === "20 feet"
+                                  ? container.quantity * 1000
+                                  : container.quantity * 2000),
+                              0
+                            )}
+                            $
+                          </TableCell>
+                        </TableRow>
+                      </TableFooter>
                     </Table>
                   </div>
                 </div>
-              </div>
-              <div className="flex gap-3 my-2">
 
-                <Button onClick={() => setStep(1)}>Previous</Button>
-                <Button onClick={() => setStep(3)}>Next</Button>
-              </div>
+                {/* Price*/}
+                <div>
+                  <Label htmlFor="price">Price (USD)</Label>
+                  <Input
+                    readOnly
+                    id="price"
+                    type="number"
+                    placeholder="Enter weight"
+                    {...register("price")}
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="handling_type">Handling Type</Label>
+                  <Select
+                    onValueChange={(value) => setValue("handling_type", value)}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select Handling Type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Employee">
+                        Employee (Material Checked)
+                      </SelectItem>
+                      <SelectItem value="Anonymous">
+                        Anonymous (No Guarantee)
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                  {errors.handling_type && (
+                    <p className="text-red-500 text-sm">
+                      {errors.handling_type.message}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="installments">Installments</Label>
+                  <Select
+                    onValueChange={(value) => setValue("installments", value)}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select Installments" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="full_payment">Full Payment</SelectItem>
+                      <SelectItem value="installment">Installments</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {installments == "installment" && (
+                  <>
+                    <div>
+                      <Label htmlFor="installments_period">
+                        Installments Period
+                      </Label>
+                      <Select
+                        onValueChange={(value) =>
+                          setValue("installment_period", parseInt(value))
+                        }
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select Installments Period" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="3">3 months</SelectItem>
+                          <SelectItem value="6">6 months</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </>
+                )}
+
+                <div>
+                  <div>
+                    <div className="space-y-2">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead>Installement</TableHead>
+                            <TableHead>Amount</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {watch("installmentDetails")?.map((e: any) => {
+                            return (
+                              <>
+                                <TableRow key={e.installment_number}>
+                                  <TableCell className="font-medium">
+                                    {e.installment_number}
+                                  </TableCell>
+                                  <TableCell>{e.amount}$</TableCell>
+                                </TableRow>
+                              </>
+                            );
+                          })}
+                        </TableBody>
+                      </Table>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 my-2">
+                  <Button onClick={() => setStep(1)}>Previous</Button>
+                  <Button onClick={() => setStep(3)}>Next</Button>
+                </div>
               </div>
             )}
 
@@ -865,10 +913,14 @@ const ContainerBookingForm = () => {
                   <Input
                     id="receiver_name"
                     placeholder="Enter receiver's name"
-                    {...register("receiver_details.name", { required: "Receiver name is required" })}
+                    {...register("receiver_details.name", {
+                      required: "Receiver name is required",
+                    })}
                   />
                   {errors.receiver_details?.name && (
-                    <p className="text-red-500 text-sm">{errors.receiver_details.name.message}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.receiver_details.name.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -876,16 +928,19 @@ const ContainerBookingForm = () => {
                   <Input
                     id="receiver_phone"
                     placeholder="Enter receiver's phone number"
-                    {...register("receiver_details.phone", { required: "Receiver phone is required" })}
+                    {...register("receiver_details.phone", {
+                      required: "Receiver phone is required",
+                    })}
                   />
                   {errors.receiver_details?.phone && (
-                    <p className="text-red-500 text-sm">{errors.receiver_details.phone.message}</p>
+                    <p className="text-red-500 text-sm">
+                      {errors.receiver_details.phone.message}
+                    </p>
                   )}
                 </div>
                 <div className="flex gap-3 my-2">
-
-                <Button onClick={() => setStep(2)}>Previous</Button>
-                <Button type="submit">Submit</Button>
+                  <Button onClick={() => setStep(2)}>Previous</Button>
+                  <Button type="submit">Submit</Button>
                 </div>
               </div>
             )}
