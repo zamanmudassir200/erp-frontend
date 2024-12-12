@@ -3,7 +3,7 @@ import axios from "axios";
 import { url } from "@/apiURL";
 export const registerClient = async (clientData: any) => {
   try {
-    const response = await axios.post(`${url}/client/register`, clientData);
+    const response = await axios.post(`${url}/register`, clientData);
     return response.data;
   } catch (error: any) {
     console.error("Error during registration:", error.response.data || error);
@@ -31,33 +31,15 @@ export const registerClient = async (clientData: any) => {
 //   return data; // Assuming 'data' contains the token and other user details
 // }
 // Client login
-export const loginClient = async (credentials: {
-  username: string;
-  password: string;
-}) => {
-  const response = await axios.post(`${url}/client/login`, credentials);
-  if (response.status !== 200) throw new Error("Login failed");
-  return response.data; // Assuming response contains the token and other user details
-};
-
-// Admin login
-export const loginAdmin = async (credentials: {
-  username: string;
-  password: string;
-}) => {
-  const response = await axios.post(`${url}/admin/login`, credentials);
-  if (response.status !== 200) throw new Error("Login failed");
-  return response.data;
-};
-
-// Employee login
-export const loginEmployee = async (credentials: {
-  username: string;
-  password: string;
-}) => {
-  const response = await axios.post(`${url}/employee/login`, credentials);
-  if (response.status !== 200) throw new Error("Login failed");
-  return response.data;
+export const login = async (name: string, password: string) => {
+  try {
+    const response = await axios.post(`${url}/login`, { name, password });
+    if (response.status !== 200) throw new Error("Login failed");
+    return response.data; // Response me token aur user details ko handle karenge
+  } catch (error) {
+    console.error("Error during login:", error);
+    throw error; // Error ko handle karne ke liye error ko wapas throw karenge
+  }
 };
 
 export const resetPasswordRequest = async (email: string) => {

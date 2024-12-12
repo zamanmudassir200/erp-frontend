@@ -503,7 +503,7 @@ import {
 } from "@/components/ui/table";
 import { toast } from "react-toastify";
 import axios from "axios";
-
+import { url } from "@/apiURL";
 // Define the form data type
 type FormValues = {
   sender_name: string;
@@ -610,7 +610,10 @@ const ContainerBookingForm = () => {
   const onSubmit = async (data: any) => {
     console.log(data);
     try {
-      const response = await axios.post("/api/container-booking", data);
+      const response = await axios.post(
+        `${url}/container/booked_container`,
+        data
+      );
       toast.success("Booking successful");
     } catch (error) {
       toast.error("Error booking container");
@@ -906,8 +909,47 @@ const ContainerBookingForm = () => {
             )}
 
             {step === 3 && (
+              // <div>
+              //   <h3 className="text-lg font-medium">Receiver Information</h3>
+              //   <div>
+              //     <Label htmlFor="receiver_name">Name</Label>
+              //     <Input
+              //       id="receiver_name"
+              //       placeholder="Enter receiver's name"
+              //       {...register("receiver_details.name", {
+              //         required: "Receiver name is required",
+              //       })}
+              //     />
+              //     {errors.receiver_details?.name && (
+              //       <p className="text-red-500 text-sm">
+              //         {errors.receiver_details.name.message}
+              //       </p>
+              //     )}
+              //   </div>
+              //   <div>
+              //     <Label htmlFor="receiver_phone">Phone</Label>
+              //     <Input
+              //       id="receiver_phone"
+              //       placeholder="Enter receiver's phone number"
+              //       {...register("receiver_details.phone", {
+              //         required: "Receiver phone is required",
+              //       })}
+              //     />
+              //     {errors.receiver_details?.phone && (
+              //       <p className="text-red-500 text-sm">
+              //         {errors.receiver_details.phone.message}
+              //       </p>
+              //     )}
+              //   </div>
+              //   <div className="flex gap-3 my-2">
+              //     <Button onClick={() => setStep(2)}>Previous</Button>
+              //     <Button type="submit">Submit</Button>
+              //   </div>
+              // </div>
               <div>
                 <h3 className="text-lg font-medium">Receiver Information</h3>
+
+                {/* Name */}
                 <div>
                   <Label htmlFor="receiver_name">Name</Label>
                   <Input
@@ -923,6 +965,8 @@ const ContainerBookingForm = () => {
                     </p>
                   )}
                 </div>
+
+                {/* Phone */}
                 <div>
                   <Label htmlFor="receiver_phone">Phone</Label>
                   <Input
@@ -938,6 +982,42 @@ const ContainerBookingForm = () => {
                     </p>
                   )}
                 </div>
+
+                {/* Address */}
+                <div>
+                  <Label htmlFor="receiver_address">Address</Label>
+                  <Input
+                    id="receiver_address"
+                    placeholder="Enter receiver's address"
+                    {...register("receiver_details.address", {
+                      required: "Receiver address is required",
+                    })}
+                  />
+                  {errors.receiver_details?.address && (
+                    <p className="text-red-500 text-sm">
+                      {errors.receiver_details.address.message}
+                    </p>
+                  )}
+                </div>
+
+                {/* Country Code */}
+                <div>
+                  <Label htmlFor="receiver_country_code">Country Code</Label>
+                  <Input
+                    id="receiver_country_code"
+                    placeholder="Enter receiver's country code"
+                    {...register("receiver_details.country_code", {
+                      required: "Country code is required",
+                    })}
+                  />
+                  {errors.receiver_details?.country_code && (
+                    <p className="text-red-500 text-sm">
+                      {errors.receiver_details.country_code.message}
+                    </p>
+                  )}
+                </div>
+
+                {/* Buttons */}
                 <div className="flex gap-3 my-2">
                   <Button onClick={() => setStep(2)}>Previous</Button>
                   <Button type="submit">Submit</Button>

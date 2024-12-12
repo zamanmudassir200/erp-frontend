@@ -1,1 +1,14 @@
-{}
+{
+  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/containerBooking/page": "app/containerBooking/page.js",
+  "/login/page": "app/login/page.js",
+  "/employee/hr/dashboard/page": "app/employee/hr/dashboard/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/employeeRegister/page": "app/employeeRegister/page.js",
+  "/employee/sales/dashboard/page": "app/employee/sales/dashboard/page.js",
+  "/employee/accounts/dashboard/page": "app/employee/accounts/dashboard/page.js",
+  "/employee/driver/dashboard/page": "app/employee/driver/dashboard/page.js",
+  "/employees/[id]/page": "app/employees/[id]/page.js"
+}

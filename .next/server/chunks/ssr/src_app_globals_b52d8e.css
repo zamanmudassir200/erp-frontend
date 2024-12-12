@@ -569,6 +569,10 @@ body {
   margin-top: 1.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -681,6 +685,10 @@ body {
   min-height: 100vh;
 }
 
+.min-h-\[calc\(100vh-80pc\)\] {
+  min-height: calc(100vh - 80pc);
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -771,6 +779,10 @@ body {
 
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-1 {
